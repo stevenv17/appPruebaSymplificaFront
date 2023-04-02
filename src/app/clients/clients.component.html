@@ -17,10 +17,31 @@
             <button nz-button nzType="primary" (click)="searchClients(true)" nzSearch><i nz-icon nzType="search"></i></button>
         </ng-template>
     </div>
-    <div nz-col class="gutter-row" [nzSpan]="3" nzXs="12" nzMd="6" nzLg="3">
-        <button nz-button nzType="primary">Advanced Search</button>
+    <div nz-col class="gutter-row" [nzSpan]="3" nzXs="12" nzMd="6" nzLg="3" *ngIf="!showAdvanceFilters">
+        <button nz-button nzType="primary" (click)="showAdvancedFilters()">Advanced Search</button>
     </div>
-
+    <div nz-col class="gutter-row" [nzSpan]="3" nzXs="24" nzMd="12" nzLg="5" *ngIf="showAdvanceFilters">
+        <nz-input-group nzSearch>
+            <input nz-input type="text" placeholder="Enter email" [(ngModel)]="filters.email" />
+        </nz-input-group>
+    </div>
+</div>
+<div nz-row [nzGutter]="[16,24]" *ngIf="showAdvanceFilters">
+    <div nz-col class="gutter-row" [nzSpan]="3" nzXs="24" nzMd="12" nzLg="5">
+        <nz-input-group nzSearch>
+            <input nz-input type="text" placeholder="Enter name" [(ngModel)]="filters.name" />
+        </nz-input-group>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3" nzXs="24" nzMd="12" nzLg="5">
+        <nz-input-group nzSearch>
+            <input nz-input type="text" placeholder="Enter phone" [(ngModel)]="filters.phone" />
+        </nz-input-group>
+    </div>
+</div>
+<div nz-row [nzGutter]="[16,24]" *ngIf="showAdvanceFilters">
+    <div nz-col class="gutter-row" [nzSpan]="3" nzXs="24" nzMd="12" nzLg="5">
+        <button nz-button nzType="primary" (click)="cleanSearch()"><i nz-icon nzType="clear"></i>Clean</button>
+    </div>
 </div>
 <nz-divider nzOrientation="left" nzText=""></nz-divider>
 <div nz-row [nzGutter]="[16, 24]">

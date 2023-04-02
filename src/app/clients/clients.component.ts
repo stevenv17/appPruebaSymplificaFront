@@ -22,8 +22,13 @@ export class ClientsComponent implements OnInit {
   loadingTable: boolean = false;
 
   filters: any = {
-    sharedKey: ""
+    sharedKey: "",
+    name: "",
+    phone: "",
+    email: ""
   }
+
+  showAdvanceFilters: boolean = false;
 
   clientFormInitial: IClient = {} as IClient;
 
@@ -135,6 +140,25 @@ export class ClientsComponent implements OnInit {
         }
     );
     
+  }
+
+  showAdvancedFilters () {
+    this.showAdvanceFilters = !this.showAdvanceFilters;
+    this.filters = {
+      sharedKey: "",
+      name: "",
+      phone: "",
+      email: ""
+    };
+  }
+
+  cleanSearch() {
+    this.filters = {
+      sharedKey: "",
+      name: "",
+      phone: "",
+      email: ""
+    };
   }
 
 }

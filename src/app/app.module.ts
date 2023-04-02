@@ -2,36 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 //Ant
-import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTableModule } from 'ng-zorro-antd/table';
-import { NzTypographyModule } from 'ng-zorro-antd/typography';
-import { NzTabsModule } from 'ng-zorro-antd/tabs';
-import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NZ_ICONS } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
-import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
-import { NzUploadModule } from 'ng-zorro-antd/upload';
-import { NzPopoverModule } from 'ng-zorro-antd/popover';
 import { NzModalModule } from 'ng-zorro-antd/modal';
-import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
-import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
-import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
-import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 
@@ -72,14 +59,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     HttpClientModule,
     BrowserAnimationsModule,
     //Ant
-    NzStepsModule,
     NzGridModule,
-    NzTabsModule,
     NzTableModule,
-    NzTypographyModule,
-    NzDescriptionsModule,
     NzMenuModule,
-    NzSwitchModule, 
     NzIconModule,
     NzSelectModule,
     NzInputModule,
@@ -88,16 +70,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     NzPageHeaderModule,
     NzDatePickerModule,
     NzToolTipModule,
-    NzCheckboxModule,
-    NzUploadModule,
-    NzPopoverModule,
     NzModalModule,
-    NzDropDownModule,
     NzDividerModule,
-    NzAutocompleteModule,
-    NzPopconfirmModule, 
     NzInputNumberModule,
-    NzCardModule,
     NzLayoutModule,
     NzMessageModule,
     ReactiveFormsModule
