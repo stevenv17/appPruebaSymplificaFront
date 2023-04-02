@@ -8,9 +8,12 @@ Node: 12.22.12
 ## requirements for this project
 
 Angular CLI: 10.2.4
+
 Node: 12.22.12
 
 ## Development server
+
+Run `npm install` the first time and after
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
