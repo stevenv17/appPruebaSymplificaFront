@@ -5,6 +5,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Angular CLI: 10.2.4
 Node: 12.22.12
 
+## Instrucciones:
+
+1. Instalar node.js 12.22.12  
+2. Instalar NVM de ser necesario (https://github.com/coreybutler/nvm-windows/releases)
+3. instalar angular -> npm install -g @angular/cli@10.x.x
+
 ## requirements for this project
 
 Angular CLI: 10.2.4
