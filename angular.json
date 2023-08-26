@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "appFrontPruebaAlianza": {
+    "AppPruebaSymplificaFront": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/appFrontPruebaAlianza",
+            "outputPath": "dist/AppPruebaSymplificaFront",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "appFrontPruebaAlianza:build"
+            "browserTarget": "AppPruebaSymplificaFront:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "appFrontPruebaAlianza:build:production"
+              "browserTarget": "AppPruebaSymplificaFront:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "appFrontPruebaAlianza:build"
+            "browserTarget": "AppPruebaSymplificaFront:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "appFrontPruebaAlianza:serve"
+            "devServerTarget": "AppPruebaSymplificaFront:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "appFrontPruebaAlianza:serve:production"
+              "devServerTarget": "AppPruebaSymplificaFront:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "appFrontPruebaAlianza"
+  "defaultProject": "AppPruebaSymplificaFront"
 }

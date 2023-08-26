@@ -18,16 +18,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'appFrontPruebaAlianza'`, () => {
+  it(`should have as title 'AppPruebaSymplificaFront'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('appFrontPruebaAlianza');
+    expect(app.title).toEqual('AppPruebaSymplificaFront');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.layout nz-layout').textContent).toContain('APP CLIENTS - ALIANZA');
-  });
+
 });

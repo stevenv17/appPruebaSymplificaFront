@@ -1,0 +1,77 @@
+<div nz-row [nzGutter]="[16,24]">
+    <div nz-col class="gutter-row" [nzSpan]="3" nzXs="12" nzMd="6" nzLg="3">
+        <button nz-button nzType="primary" (click)="showModal()">
+            <i nz-icon nzType="plus"></i>New
+        </button>
+    </div>
+</div>
+
+
+<div nz-row [nzGutter]="[16, 24]">
+    <div nz-col class="gutter-row" [nzSpan]="24">
+        
+        <nz-table #rowSelectionTable
+                nzShowSizeChanger
+                [nzData]="listUsers"
+                [nzFrontPagination]="true"
+                [nzPageSizeOptions]="[5,10,20]">
+            <thead>
+                <tr> 
+                <th scope="col" nzWidth="12%">id</th>
+                <th scope="col" nzWidth="25%">Name</th>
+                <th scope="col" nzWidth="25%">Last Name</th>
+                <th scope="col" nzWidth="25%">E-mail</th>
+                <th scope="col" nzWidth="12%"><i nz-icon nzType="delete"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of rowSelectionTable.data">
+                <td>{{row.id}}</td>
+                <td>{{row.name}}</td> 
+                <td>{{row.lastName}}</td>          
+                <td>{{row.email}}</td>  
+                <td>
+                    <button nz-button [nzSize]="small" nzType="default" nzShape="circle" (click)="deleteUser(row)">
+                        <i nz-icon nzType="delete"></i>
+                    </button>
+                </td>
+                </tr>
+            </tbody>
+        </nz-table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<nz-modal
+    [(nzVisible)]="modalVisible"
+    [nzTitle]="modalTitle"
+    (nzOnCancel)="modalVisible = false;"
+    (nzOnOk)="newUser()">
+    <form>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" [(ngModel)]="userForm.name" name="nombre" />
+        </div>
+        <br>
+        <div>
+            <label for="lastName">Last name: </label>
+            <input type="text" id="lastName" [(ngModel)]="userForm.lastName" name="lastName" />
+        </div>
+        <br>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" id="email" [(ngModel)]="userForm.email" name="email" />
+        </div>
+    
+    </form>
+
+</nz-modal>

@@ -30,14 +30,14 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { ClientsComponent } from './clients/clients.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 
 registerLocaleData(en);
 
 const appRoutes: Routes = [
-  { path: 'clients', component: ClientsComponent }
+  { path: 'users', component: UserComponent }
 ];
 
 const antDesignIcons = AllIcons as {
@@ -50,7 +50,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
 @NgModule({
   declarations: [
     AppComponent,
-    ClientsComponent
+    UserComponent
   ],
   imports: [
     BrowserModule,
